@@ -10,7 +10,7 @@ class UserRepository:
     """Class to manage User Repository"""
 
     @classmethod
-    def insert_user(cls, name: str, password: str) -> UsersModel:
+    def insert_user(cls, name: str, password: str) -> Users:
         """Insert data in user entity
         :paran - name: person name
                - password: user password
@@ -35,7 +35,7 @@ class UserRepository:
             return None
 
     @classmethod
-    def select_user(cls, user_id: int = None, name: str = None) -> List[UsersModel]:
+    def select_user(cls, user_id: int = None, name: str = None) -> List[Users]:
         """
         Select data in user entity by in and/or name
         :paran - user_id: Id of the registry
