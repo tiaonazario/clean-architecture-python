@@ -15,12 +15,12 @@ class AnimalTypes(enum.Enum):
 
 
 class Pets(Base):
-    """Pets"""
+    """Pets Entity"""
 
     __tablename__ = "pets"
 
     id = Column(Integer, primary_key=True)
-    name = Column(String, nullable=False, unique=True)
+    name = Column(String(40), nullable=False, unique=True)
     specie = Column(Enum(AnimalTypes), nullable=False)
     age = Column(Integer)
     user_id = Column(Integer, ForeignKey("users.id"))
